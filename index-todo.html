@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css-todo.css"> 
+    <script src="script-todo.js" defer></script> 
+    <script src="script.js" defer></script>
+    <script src="weekly-index.js" defer></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+</head>
+<body>
+    <div class="all-container">
+        <div class="main-container">
+            <div class="todonprogress">
+                <div class="overlay"></div>
+                <div class="container">
+                    <h1 style="font-family: Playwrite ES; color: rgb(224, 211, 196);" >To-Do List</h1>
+                
+                    <div class="task-input">
+                        <input type="text" id="task" placeholder="Add your task">
+                        <button id="add-task-btn">Add Task</button>
+                    </div>
+                    <ul id="task-list">
+                        <!-- Tasks will be dynamically added here -->
+                    </ul>
+                    
+                </div>
+                <div class="progress" id="progress-make"> 
+                    <svg class="progress-circle" viewBox="0 0 100 100">
+                        <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="progress-bar" cx="50" cy "50" r="45"></circle>
+                    </svg>
+                    <div id="number">
+                        0%
+                    </div>
+                </div>
+                </div>
+
+                <div class="playlist-container">
+                    <h4>Playlist</h4>
+                    <div class="playlist-input">
+                        <input type="text" id="playlist-link" placeholder="Paste YouTube link here">
+                        <button id="add-playlist-btn">Add</button>
+                    </div>
+                    <div id="player"></div>
+                </div>
+
+
+            
+        
+
+            <div class="watch-container">
+                <div class="overlay"></div>
+                <div class="timer-container" id="timer-container">
+                    <h2 style="font-family: Playwrite ES; color: rgb(224, 211, 196);" >Study Timer</h2>
+                    <div class="time-setter">
+                        <input type="number" id="hours" placeholder="Hours" min="0">
+                        <input type="number" id="minutes" placeholder="Minutes" min="0" max="59">
+                    </div>
+                    <div class="time-display" id="time-display">00:00:00</div>
+                    <div class="timer-controls">
+                        <button id="start-btn">Start</button>
+                        <button id="pause-btn">Pause</button>
+                        <button id="reset-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>  
+
+        <div class="side-nav">
+        <div class="user">
+            <img src="WhatsApp Image 2024-06-21 at 2.10.15 PM.jpeg" style="width: 50px" class="user-image"/>
+            </div>
+            <div> 
+                <h5>Tarini Magotra</h5>
+            </div>
+            <div>
+                <ul>
+                    <li><img src="clock.jpeg" class="clock"><p>Hours Studied</p></li>
+                    <li><img src="fire.jpeg" class="fire"><p>Days Streak</p></li>
+                    <li><img src="calculator.jpeg" class="calculator" id="calculator-icon"><p>Calculator</p></li>
+                    <li><img src="home.jpeg" class="home" id="home-icon"><p>Home</p></li>
+                </ul>
+            </div>
+            
+        </div>
+
+      
+    </div>
+    
+</body>
+</html>

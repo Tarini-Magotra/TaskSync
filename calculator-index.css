@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    background-color: #676d7b; /* Fallback background color */
+    position: relative; /* Ensure positioning context for the pseudo-element */
+    margin-right: 40px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: url('undraw_refreshing_beverage_td3r.svg') no-repeat center center;
+    background-size: 100%; /* Adjust the value to make the image smaller */
+    opacity: 0.5; /* Change this value to adjust opacity */
+    z-index: -1; /* Ensure the background is behind other content */
+}
+.calculator-main {
+    width: 300px;
+    background-color : #2f3241;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 254, 254, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-left: 150px; /* Adjust this value as needed */
+}
+
+#display {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    text-align: right;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    background-color: #7e839f;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2a1d1d;
+    color:rgb(231, 219, 232);
+}
+
+.side-nav {
+    width:100px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    transition: width 0.4s;
+    z-index:3;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+.user-image {
+    border-radius: 50%;
+    margin: auto;
+}
+
+.clock, .fire, .calculator, .home {
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block; 
+    margin-right: 10px; 
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+ul li p {
+    margin: 0; 
+    white-space:nowrap;
+    display: none;
+}
+
+.side-nav:hover{
+    width:200px;
+}
+
+.side-nav:hover ul li p{
+    display: block;
+}
+.side-nav:hover ~ .container {
+    margin-left: 180px;
+    visibility: hidden;
+}
